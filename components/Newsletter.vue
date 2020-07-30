@@ -17,7 +17,13 @@ export default {
     },
     methods: {
         submit(){
-            alert(this.email);
+            axios.post("https://musing-bose-cef445.netlify.app/.netlify/functions/index", {email: this.email},
+                { headers : {
+                    "Content-Type": "application/json"
+                }}
+            ).then((res) =>{
+                console.log(res.status)
+            }).catch(error => {console.log(error)})
         }
     }
 }
