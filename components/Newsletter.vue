@@ -3,13 +3,15 @@
         <h2>Newsletter</h2>
         <form @submit.prevent='submit'>
             <input type="email" placeholder="Email" v-model="email">
-            <button type="submit"></button>
+            <button type="submit">Submit</button>
         </form>
     </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
+ 
     data(){
         return{
             email: ''
@@ -54,14 +56,14 @@ export default {
     button{
         padding: .5rem 1rem;
         text-transform: uppercase;
-        background-color: aqua;
+        background-color: rgb(126, 122, 179);
         color: #000;
         outline: none;
         margin-top: 1rem;
     }
 
     button:hover{
-        background-color: rgb(101, 165, 165);
+        background-color: rgb(75, 66, 124);
     }
     
 </style>
